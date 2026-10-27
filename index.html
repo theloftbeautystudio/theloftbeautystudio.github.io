@@ -1,1 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Wedding makeup by The Loft Beauty Studio. Explore my bridal portfolio and get in touch about your wedding.">
+  <title>Bridal Wedding Makeup | The Loft Beauty Studio</title>
 
+  <style>
+    :root {
+      --cream: #f7f4ef;
+      --white: #fffefa;
+      --ink: #302c29;
+      --muted: #716a63;
+      --rose: #a86f69;
+      --line: #e5ded5;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Arial, Helvetica, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--white);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.7;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1120px, 90%); margin: auto; }
+
+    header {
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      text-decoration: none;
+      letter-spacing: .03em;
+    }
+    nav { display: flex; flex-wrap: wrap; gap: 22px; }
+    nav a {
+      font-size: .88rem;
+      text-decoration: none;
+      color: var(--muted);
+    }
+    nav a:hover { color: var(--rose); }
+
+    .hero {
+      background: var(--cream);
+      padding: 90px 0;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 56px;
+      align-items: center;
+    }
+    .eyebrow {
+      color: var(--rose);
+      font-size: .75rem;
+      font-weight: bold;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { font-family: var(--serif); font-weight: normal; line-height: 1.2; }
+    h1 { font-size: clamp(2.8rem, 6vw, 5rem); margin: 14px 0 22px; }
+    h2 { font-size: clamp(2.1rem, 4vw, 3.2rem); margin: 10px 0 18px; }
+    .intro { max-width: 540px; color: var(--muted); font-size: 1.08rem; }
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 13px 23px;
+      background: var(--ink);
+      color: white;
+      text-decoration: none;
+      font-size: .85rem;
+      letter-spacing: .04em;
+    }
+    .button:hover { background: var(--rose); }
+    .photo-placeholder {
+      min-height: 420px;
+      display: grid;
+      place-items: center;
+      padding: 30px;
+      background: #e8dfd6;
+      color: #766d64;
+      text-align: center;
+      font-family: var(--serif);
+      font-size: 1.2rem;
+    }
+
+    section { padding: 82px 0; }
+    .section-copy { max-width: 680px; color: var(--muted); }
+    .about { background: var(--white); }
+    .services { background: var(--cream); }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      margin-top: 34px;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 26px;
+    }
+    .card h3 { font-size: 1.45rem; margin: 0 0 10px; }
+    .card p { margin: 0; color: var(--muted); }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .gallery-grid .photo-placeholder { min-height: 270px; font-size: 1rem; }
+
+    .quote {
+      background: var(--cream);
+      text-align: center;
+    }
+    blockquote {
+      max-width: 720px;
+      margin: 24px auto 0;
+      font-family: var(--serif);
+      font-size: 1.55rem;
+    }
+    .quote-note { color: var(--muted); font-size: .9rem; }
+
+    .contact { text-align: center; }
+    .contact .section-copy { margin: auto; }
+    footer {
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .85rem;
+    }
+    footer .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 760px) {
+      .nav { align-items: flex-start; flex-direction: column; padding: 18px 0; gap: 10px; }
+      nav { gap: 12px 18px; }
+      .hero { padding: 58px 0; }
+      .hero-inner { grid-template-columns: 1fr; gap: 30px; }
+      .photo-placeholder { min-height: 300px; }
+      section { padding: 60px 0; }
+      .cards, .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-grid .photo-placeholder { min-height: 300px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home">The Loft Beauty Studio</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#makeup">Bridal makeup</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Enquiries</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-inner">
+        <div>
+          <div class="eyebrow">Wedding makeup · [Your area]</div>
+          <h1>Makeup that still feels like you.</h1>
+          <p class="intro">
+            Thoughtful, beautiful wedding makeup for a day you’ll remember forever.
+            Get in touch to tell me about your plans.
+          </p>
+          <a class="button" href="#contact">Enquire about your wedding</a>
+        </div>
+        <div class="photo-placeholder">
+          Main wedding photo<br>Replace with a favourite bridal image
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="wrap">
+        <div class="eyebrow">A little about us</div>
+        <h2>Your wedding morning, made special.</h2>
+        <p class="section-copy">
+          I’m Jess, the makeup artist and beautician behind The Loft Beauty Studio.
+          I love helping each bride feel comfortable, confident, and beautifully
+          herself. 
+          A bit about me: 
+          I am a mum of two, navigating the chaos of motherhood whilst running my beauty business.
+          I've worked in the beauty industry for 15 years and can't imagine doing anything else.
+          My favourite thing about my career is making my gorgeous clients feel good about themselves.
+          I love all of the treatments I do, but my favourites have to be bridal makeup and brows!
+          I am obsessed with live music. Concerts and festivals are my happy place.
+          I have a passion for cooking and baking at home, but also love the gym as a little escape for some "me time".
+          It's all about balance; give me a cappuccino in the morning, an iced matcha in the afternoon, and a mojito when the sun goes down.
+          I've been lucky enough to explore some amazing countries, but Italy has my heart <3
+    
+        </p>
+      </div>
+    </section>
+
+    <section class="services" id="makeup">
+      <div class="wrap">
+        <div class="eyebrow">The experience</div>
+        <h2>Bridal makeup, thoughtfully tailored.</h2>
+        <p class="section-copy">
+          Every wedding is different. I offer bridal makeup that includes a consultation, trial, and travel to venue. 
+          I will work with you to create personalised, long-lasting makeup looks that enhance your natural beauty and leave you feeling confident on your special day.
+          Each bride is different, which is why I take the time to understand your vision and your wedding plans before creating a look that is unique to you.
+          I create bridal makeup that lasts from your first look, to your final dance.
+        </p>
+        <div class="cards">
+          <article class="card">
+            <h3>Your bridal look</h3>
+            <p>I offer makeup that aligns with your needs. From enhancing your natural features to a full glam, I'm here to bring your vision to life.</p>
+          </article>
+          <article class="card">
+            <h3>Makeup trial</h3>
+            <p>A consultation is included in the bridal package. Our consultation will include understanding your wedding plans, your desired look, and a bridal makeup trial.</p>
+          </article>
+          <article class="card">
+            <h3>Your wedding party</h3>
+            <p>I also offer makeup for your bridal party so that you and your party can relax and enjoy the day.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+<section class="services" id="pricing">
+  <div class="wrap">
+    <div class="eyebrow">Investment</div>
+    <h2>Bridal makeup pricing</h2>
+    <p class="section-copy">
+      Clear pricing to help you plan your wedding morning.
+    </p>
+
+    <div class="cards">
+      <article class="card">
+        <h3>Bridal makeup</h3>
+        <p>Wedding day makeup for the bride. Including consultation, trial and travel to venue.</p>
+        <p><strong>From £160</strong></p>
+      </article>
+
+      <article class="card">
+        <h3>Occasion Makeup</h3>
+        <p>Makeup for any occasion.</p>
+        <p><strong>From £40</strong></p>
+      </article>
+
+      <article class="card">
+        <h3>Bridal party</h3>
+        <p>Makeup for bridesmaids or other members of your party.</p>
+        <p><strong>From £60</strong></p>
+      </article>
+    </div>
+
+    <p class="quote-note">
+      Travel fees, minimum booking numbers, and other terms: 
+      Additional charges may apply for travel if not local.
+    </p>
+  </div>
+</section>
+    <section id="gallery">
+      <div class="wrap">
+        <div class="eyebrow">The portfolio</div>
+        <h2>Wedding day moments</h2>
+        <p class="section-copy">A selection of bridal makeup looks and real wedding moments.</p>
+        <div class="gallery-grid">
+          <div class="photo-placeholder">Bridal makeup photo 1</div>
+          <div class="photo-placeholder">Bridal makeup photo 2</div>
+          <div class="photo-placeholder">Bridal makeup photo 3</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote">
+      <div class="wrap">
+        <div class="eyebrow">Kind words</div>
+        <blockquote>
+          “Jess is amazing. I honestly couldn't have been happier with my wedding makeup. I felt stunning all day and even after a lot of wine and a good night's sleep, my makeup was still perfect in the morning. She is truly unbelievable.”
+        </blockquote>
+        <p class="quote-note">[Tilli P]</p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div class="eyebrow">Let’s talk about your day</div>
+        <h2>Enquire about your wedding</h2>
+        <p class="section-copy">
+          Send a message with your wedding date, venue, and a little about the
+          look you have in mind. I'll be in touch.
+        </p>
+        <a class="button" href="mailto:YOUR-EMAIL@example.com?subject=Wedding%20makeup%20enquiry">
+          Email The Loft Beauty Studio
+        </a>
+        <p class="quote-note">[https://www.instagram.com/theloftbeautystudio_/?utm_source=ig_web_button_share_sheet]</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© The Loft Beauty Studio</span>
+      <span>Wedding makeup · [Your area]</span>
+    </div>
+  </footer>
+</body>
+</html>
