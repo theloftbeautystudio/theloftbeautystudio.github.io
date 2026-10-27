@@ -179,6 +179,26 @@
 .about-list li::marker {
   color: var(--rose);
 }
+    .feature-list {
+  max-width: 680px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+}
+
+.feature-list li {
+  position: relative;
+  margin: 0 0 8px;
+  padding-left: 24px;
+}
+
+.feature-list li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: var(--rose);
+}
     
     @media (max-width: 760px) {
       .nav { align-items: flex-start; flex-direction: column; padding: 18px 0; gap: 10px; }
@@ -279,16 +299,12 @@
       <div class="wrap">
         <div class="eyebrow">The experience</div>
         <h2>Bridal makeup, thoughtfully tailored.</h2>
-        <p class="section-copy">
-         <div class="section-copy">
-  <p>Every wedding is different. I offer bridal makeup that includes a consultation, trial, and travel to venue.</p>
-
-  <p>I will work with you to create personalised, long-lasting makeup looks that enhance your natural beauty and leave you feeling confident on your special day.</p>
-
-  <p>Each bride is different, which is why I take the time to understand your vision and your wedding plans before creating a look that is unique to you.</p>
-
-  <p>I create bridal makeup that lasts from your first look to your final dance.</p>
-</div>
+       <ul class="feature-list">
+  <li>Every wedding is different. I offer bridal makeup that includes a consultation, trial, and travel to the venue.</li>
+  <li>I will work with you to create personalised, long-lasting makeup that enhances your natural beauty and leaves you feeling confident on your special day.</li>
+  <li>I take the time to understand your vision and wedding plans before creating a look that is unique to you.</li>
+  <li>I create bridal makeup that lasts from your first look to your final dance.</li>
+</ul>
         </p>
         <div class="cards">
           <article class="card">
